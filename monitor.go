@@ -103,7 +103,7 @@ func getSitesFromFile() []string {
 }
 
 func registerLogs(site string, status bool) {
-	file, error := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	file, error := os.OpenFile("log.txt", os.O_RDWR|os.O_APPEND|os.O_CREATE, 0666)
 
 	if error != nil {
 		fmt.Println("Error", error)
